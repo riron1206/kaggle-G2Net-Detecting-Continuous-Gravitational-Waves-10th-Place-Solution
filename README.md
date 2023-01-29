@@ -2,7 +2,7 @@
 
 ----------------------------------------------------------------
 
-**I( [anonamename](https://www.kaggle.com/anonamename) ) did all solutions by myself. I did not get help from my teammates.**
+**I([anonamename](https://www.kaggle.com/anonamename)) did all solutions by myself. I did not get help from my teammates.**
 
 **Due to the lack of time to organize the code, the code used in the experiment is also included in this repository.**
 
@@ -23,19 +23,27 @@ solution summary: https://www.kaggle.com/competitions/g2net-detecting-continuous
 
 Used the following docker image for the execution environment.
 
-- Data generation by PyFstat: `docker pull ghcr.io/pyfstat/pyfstat/pyfstat:latest` 
+- Data generation by PyFstat:
+  
+  - `docker pull ghcr.io/pyfstat/pyfstat/pyfstat:latest` 
+  
+  - Python packages are detailed separately in [./gen_data/requirements.txt](./gen_data/requirements.txt)
 
-- Train, Prediction: `docker pull sinpcw/pytorch:1.11.0`
+- Train, Prediction: 
+  
+  - `docker pull sinpcw/pytorch:1.11.0`
+  
+  - Python packages are detailed separately in [./train/requirements.txt](./train/requirements.txt)
 
 ## Data generation by PyFstat
 
-- Run all notebooks in the [get_data](./get_data)
+- Run all notebooks in the [./gen_data](./gen_data)
   
   - Requires approximately 2TB of free space in storage
 
 ## Training, Prediction
 
-- Run all the notebooks in [train](./train) all notebooks in the following order.
+- Run all the notebooks in [./train](./train) all notebooks in the following order.
 - Iterate the process of creating pseudo-labels for the test set in the LB improved model and add them to the training data.
 
 ```bash
